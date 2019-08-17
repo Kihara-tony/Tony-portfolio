@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load bootstrap3%}
+{% block content %}
+<h1 class="jumbotron text-center" style="font-family: 'Fredericka the Great', cursive;color:purple;font-size:4em;">projects</h1>
+{% for project in projects %}
+<div class="container-fluid col-md-4 hood-section text-center">
+		<div class="row">
+				<div class="card ml-4 mt-4" style="width: 40rem;height: 37rem;">
+					<div class="view overlay zoom">
+					<p style="font-size:18px; text-align:center;"><b>{{ project.title }}</b></p>
+						<a><img class="card-img-top" height="250px"  src="{{ project.image}}" alt="Card image cap"></a>
+					</div>
+					<div class="card-body">
+					<p class='text-center' style="font-size: 15px">{{ project.description }}</p>
+					<p class='text-center' style="font-size: 15px">{{ project.technologies}}</p>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<a href="{{ project.githublink }}" class="btn btn-primary">Github</a>
+						</div>
+						<div class="col-md-4">
+							<a href="{{ project.livesite }}" class="btn btn-primary">Live site</a>
+						</div>
+					</div>
+				</div>
+				
+		</div>
+	</div>
+	{% endfor %}
+	
+{% endblock %}

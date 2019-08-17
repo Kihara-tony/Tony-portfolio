@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+{% load bootstrap3%}
+{% load static%}
+{% block content%}
+<h1 class="jumbotron text-center" style="font-family: 'Fredericka the Great', cursive;color:purple;font-size: 4em;">About Me </h1>
+
+      <div class="container">
+            <div class="card text-center" style="padding:10px;">
+              <hr>
+                <h2 style="font-family: 'Fredericka the Great', cursive;color: purple;font-size:2.5em;">Tony Kihara Njenga</h2>
+                <img class="img-fluid mb-5 d-block mx-auto" src="/static/img/profile.jpg" alt="tony" style="height: 100px;">
+                <p style="font-family: 'Merienda', cursive;font-size:2em;"> I love music,reading,watching and coding.</p>
+                <hr >
+                <h2 style="font-family: 'Fredericka the Great', cursive;color:purple;font-size:2.5em;">Web Developer - Python - Django</h2>
+                <p style="font-family: 'Merienda', cursive;font-size:2em;">I'm a Web Developer working on Python 3, Using Django 2.1 for Web Development as a full stack developer.Having an experience of six months</p>
+                <p style="font-family: 'Merienda', cursive;font-size:2em;">Also having knowledge of HTML, CSS, Javascript, Ajax, Bootstrap, GIT.  </p>
+                <hr>
+            </div>
+          <div class="text-center mt-4">
+            <a class="btn btn-success" href="/static/files/db-fund.pdf" download>
+              <i class="fas fa-download mr-2"></i>
+              Download CV
+            </a>
+          </div>
+      </div>
+          {% include 'footer.html'%}
+{% endblock %}

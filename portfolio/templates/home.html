@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap3 %}
+{% block content %}
+<div id="myCarousel" class="carousel slide" data-ride="carousel"  style="height:500px;">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+        <img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Best-Friend-Wallpapers-HD-For-Desktop.jpg" alt="Los Angeles" style="height:500px;width:100%;">
+      <div class="carousel-caption">
+          <h3 style="font-family: 'Saira Stencil One', cursive; font-size:50px;margin-bottom: 23%;">Tony Kihara</h3>
+          <p style="font-family: 'Courgette', cursive;font-size: 2.5em;color: yellow;">Full stack Developer!</p>
+          <a href="{% url 'projects' %}"><button class="btn btn-primary">CHECK PROJECTS</button></a>
+      </div>
+    </div>
+
+    <div class="item">
+        <img src="https://wallpapersite.com/images/wallpapers/wooden-guitar-2560x1600-dark-background-guitar-hd-950.jpg" alt="Chicago" style="height:500px;width:100%;">
+      <div class="carousel-caption">
+          <h3 style="font-family: 'Saira Stencil One', cursive; font-size:50px;margin-bottom: 20%;">I love Music</h3>
+          <p style="font-family: 'Courgette', cursive;font-size: 2.5em;color: yellow;">As the notes go so does the codes flow!</p>
+          <a href="{% url 'aboutme'%}"><button class="btn btn-primary" style="font-size: 1.3em;">ABOUT ME</button></a> 
+      </div>
+    </div>
+
+    <div class="item">
+        <img src="https://wallpaperset.com/w/full/5/b/1/149684.jpg" alt="New York" style="height:500px;width:100%;">
+      <div class="carousel-caption">
+          <h3 style="font-family: 'Saira Stencil One', cursive; font-size:50px;margin-bottom: 20%;">BREAK OUT</h3>
+          <p style="font-family: 'Courgette', cursive;font-size: 2.5em;color: brown;">Contact me and lets talk!</p>
+          <a href="{% url 'contact'%}"><button class="btn btn-primary" style="font-size: 1.3em;">CONTACT ME</button></a> 
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+{% endblock %}
